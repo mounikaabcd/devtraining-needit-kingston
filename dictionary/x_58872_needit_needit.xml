@@ -2,6 +2,16 @@
 <database>
     <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
         <element label="New field 1" max_length="40" name="new_field_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="first" label="rank" max_length="40" name="u_choice_5" type="string">
+            <choice>
+                <element label="first" sequence="0" value="first"/>
+                <element label="second" sequence="1" value="second"/>
+                <element label="third" sequence="2" value="third"/>
+            </choice>
+        </element>
+        <element label="dob" max_length="40" name="u_glide_date_2" type="glide_date"/>
+        <element label="When needed" mandatory="true" max_length="40" name="u_glide_date_3" type="glide_date"/>
+        <element label="My ref" mandatory="true" max_length="32" name="u_reference_4" reference="x_58872_needit_needit" type="reference"/>
         <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
             <choice>
@@ -22,5 +32,6 @@
             </choice>
         </element>
         <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+        <element label="when needed" max_length="40" name="when_needed" type="glide_date"/>
     </element>
 </database>
